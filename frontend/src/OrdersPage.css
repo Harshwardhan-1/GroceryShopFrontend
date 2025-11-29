@@ -1,0 +1,87 @@
+/* Container */
+.order-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.order-container h1.page-title {
+  color: #34495e;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Product Name */
+.order-container h1.product-name {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* Product Image */
+.order-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #f2f3f4;
+}
+
+/* Input and Button */
+.order-container input[type="number"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.order-container button {
+  padding: 8px 16px;
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.order-container button:hover {
+  background: #27ae60;
+}
+
+/* Total Cost & Quantity */
+.order-container .total {
+  margin-top: 20px;
+  color: #34495e;
+}
+
+.order-container .total h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.order-container .total span.cost {
+  color: #27ae60;
+}
+
+.order-container .total span.qty {
+  color: #2980b9;
+}
+
+
+
+.coste{
+    margin: 10px;
+
+}
