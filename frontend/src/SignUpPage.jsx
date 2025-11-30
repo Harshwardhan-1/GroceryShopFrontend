@@ -29,6 +29,11 @@ export default function HomePage(){
         console.log(response.data);
         navigate("/SignInPage",{state:{harsh:data}});
     }
+
+    const signIn=()=>{
+        navigate("/SignInPage");
+    }
+
     return(
         <>
         <h1>Enter your details</h1>
@@ -40,6 +45,7 @@ export default function HomePage(){
     <input type="text" placeholder="Enter your PhoneNo." name="phoneNo" onChange={(e)=>setPhoneNo(e.target.value)}/>
    <input type="text" placeholder="Enter your pin code" name="pinCode" onChange={(e)=>setPinCode(e.target.value)}/>
      <input type="submit" />
+     <button className='signIn' onClick={signIn}>Already have an account go to <b className='harsh'>Sign in</b></button>
         </form>
 
 

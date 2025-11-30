@@ -65,3 +65,14 @@ p {
     color: #2f3640;
     margin: 5px 0;
 }
+
+
+.signIn{
+    border-radius: 10px;
+    border: none;
+}
+
+.harsh{
+    color: blue;
+}
+
