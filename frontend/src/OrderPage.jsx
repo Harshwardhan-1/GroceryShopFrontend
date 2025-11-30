@@ -14,7 +14,7 @@ export default function OrderPage(){
     const ChooseQuantity=async(id)=>{
         if(!quantity)return;
         const send={id,quantity};
-        const response=await axios.post("https://groceryshopbackend-3.onrender.com/api/product/getquantity",send,{withCredentials:true});
+        const response=await axios.post("https://grocery-store-backend-1.onrender.com/api/product/getquantity",send,{withCredentials:true});
         setChange(response.data.data);
 
     }
@@ -30,7 +30,7 @@ export default function OrderPage(){
 
     const handleAddToCart=async()=>{
      const addtocart={userId:harsh.userId,quantity:quantity,price:change,image:harsh.image};
-     const response=await axios.post("https://groceryshopbackend-3.onrender.com/api/cart/cartItems",addtocart,{withCredentials:true});
+     const response=await axios.post("https://grocery-store-backend-1.onrender.com/api/cart/cartItems",addtocart,{withCredentials:true});
      console.log(response.data);
      navigate("/ProductPage/OrderPage/Product/AddToCart",{state:{yadav:harsh}});
     }
@@ -55,7 +55,7 @@ const handlePayment = async () => {
     };
 
     const { data } = await axios.post(
-      "https://groceryshopbackend-3.onrender.com/api/cart/AddPayment",
+      "https://grocery-store-backend-1.onrender.com/api/cart/AddPayment",
       sendData,
       { withCredentials: true }
     );
@@ -112,7 +112,7 @@ const handlePayment = async () => {
         <div className="order-container">
   <h1 className="page-title">Order Page</h1>
   <h1 className="product-name">{harsh.name}</h1>
-  <img src={`https://groceryshopbackend-3.onrender.com/uploads/${harsh.image}`} alt="" />
+  <img src={`https://grocery-store-backend-1.onrender.com/uploads/${harsh.image}`} alt="" />
   <form onSubmit={(e) => e.preventDefault()}>
     <input type="number" placeholder='Enter quantity' min="1" onChange={(e)=>setQuantity(e.target.value)} />
     <button onClick={() => ChooseQuantity(harsh._id)}>Press Enter</button>

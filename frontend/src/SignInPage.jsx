@@ -14,7 +14,7 @@ export default function SignInPage(){
     const handle=async(e)=>{
         e.preventDefault();
         const send={gmail,password};
-        const response=await axios.post( "https://groceryshopbackend-3.onrender.com/api/all/signin",send,{withCredentials:true});
+        const response=await axios.post( "https://grocery-store-backend-1.onrender.com/api/all/signin",send,{withCredentials:true});
         if(response.data.message=== "login successfull"){
             navigate("/ProductsPage",{state:{harsh:ram}});
         }
