@@ -16,7 +16,7 @@ export default function HomePage(){
 
     useEffect(()=>{
         const fetch=async()=>{
-            const response=await axios.get("https://grocery-store-backend-2.onrender.com/api/all/getAll");
+            const response=await axios.get("https://grocery-store-backend-3.onrender.com/api/all/getAll");
             setData(response.data.allUsers);
         };
         fetch();
@@ -25,7 +25,7 @@ export default function HomePage(){
     const handle=async(e)=>{
         e.preventDefault();
         const send={name,gmail,password,address,phoneno,pincode};
-        const response=await axios.post("https://grocery-store-backend-2.onrender.com/api/all/signup",send,{withCredentials:true});
+        const response=await axios.post("https://grocery-store-backend-3.onrender.com/api/all/signup",send,{withCredentials:true});
         console.log(response.data);
         navigate("/SignInPage",{state:{harsh:data}});
     }

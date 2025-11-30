@@ -10,7 +10,7 @@
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const response = await axios.get("https://grocery-store-backend-2.onrender.com/api/all/particularUser",{withCredentials:true});
+      const response = await axios.get("https://grocery-store-backend-3.onrender.com/api/all/particularUser",{withCredentials:true});
       setData(response.data.data);
     };
     fetchUser();
@@ -21,7 +21,7 @@
     e.preventDefault();
     const formData=new FormData();
     formData.append("images",image);
-    const response=await axios.post("https://grocery-store-backend-2.onrender.com/api/all/profilePic",formData,{withCredentials:true,headers:{"Content-Type":"multipart/form-data",},});
+    const response=await axios.post("https://grocery-store-backend-3.onrender.com/api/all/profilePic",formData,{withCredentials:true,headers:{"Content-Type":"multipart/form-data",},});
     setData(response.data.data);
   }
 
@@ -68,7 +68,7 @@
         {data && (
           <div className="profile-box">
             <div className="profile-image-wrapper">
-              <img src={data.profilePic ? `https://grocery-store-backend-2.onrender.com/uploads/${data.profilePic}` 
+              <img src={data.profilePic ? `https://grocery-store-backend-3.onrender.com/uploads/${data.profilePic}` 
               :"https://cdn-icons-png.flaticon.com/512/847/847969.png"
                 } 
                 className="profile-image" 

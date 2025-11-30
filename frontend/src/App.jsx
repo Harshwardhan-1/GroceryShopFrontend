@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import {Routes,Route} from 'react-router-dom';
 import HomePage from './SignUpPage'
 import SignInPage from './SignInPage';
@@ -11,7 +12,13 @@ import './App.css'
 
 function App() {
   
+useEffect(() => {
+    const interval = setInterval(() => {
+      fetch("https://grocery-store-backend-2.onrender.com/ping");
+    }, 5 * 60 * 1000);
 
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
     <Routes>
